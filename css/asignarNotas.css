@@ -1,0 +1,139 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4e8c1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: #4b3b2f;
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.welcome-text {
+    color: #fff;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.logout-btn {
+    color: #fff;
+    font-size: 16px;
+    padding: 5px 15px;
+    text-decoration: none;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #8b623a;
+}
+
+/* Contenedor principal */
+.container {
+    background: #4b3b2f;
+    color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 80%;
+    margin-top: 70px; /* Para no tapar la navbar */
+}
+
+/* Botones de actividad */
+.btn-container {
+    margin: 20px 0;
+}
+
+.btn-actividad {
+    background: #a67c52;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-actividad:hover {
+    background: #8b623a;
+}
+
+/* Formulario */
+.form-container {
+    margin-top: 20px;
+    padding: 20px;
+    background: #e4d3ad;
+    color: #4b3b2f;
+    border-radius: 10px;
+}
+
+/* Tabla */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background: #fff;
+    color: #4b3b2f;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.styled-table th, .styled-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.styled-table th {
+    background: #a67c52;
+    color: white;
+}
+
+.styled-table tr:hover {
+    background: #d2b48c;
+}
+
+/* Inputs */
+.input-nota {
+    width: 30%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #a67c52;
+    text-align: center;
+}
+
+/* Botón guardar */
+.btn-guardar {
+    background: #a67c52;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin-top: 15px;
+}
+
+.btn-guardar:hover {
+    background: #8b623a;
+}
+    
