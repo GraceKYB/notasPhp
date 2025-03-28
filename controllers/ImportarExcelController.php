@@ -160,6 +160,7 @@ if (isset($_FILES['excel_file']) && $_FILES['excel_file']['error'] === 0) {
     $_SESSION['datosImportados'] = $datosImportados;
 
     echo "Archivo importado y notas guardadas correctamente.";
+    require_once '../views/aportes.php';
     exit();
 } else {
     echo "No se ha subido un archivo o ocurrió un error en la carga.";

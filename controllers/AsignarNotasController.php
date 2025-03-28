@@ -28,8 +28,18 @@ if (
 }
 
 $asignarNotasModel = new AsignarNotas($conexion);
+
+
 $estudiantes = $asignarNotasModel->getEstudiantes($id_asignatura, $id_carrera, $id_nivel, $id_jornada, $id_paralelo);
 $aportes = $asignarNotasModel->getAportes();
+// Obtener las notas actuales desde la base de datos
+$notasExistentes = $asignarNotasModel->getNotasExistentes($id_asignatura);
+$notasMap = [];
+
+// Mapear las notas existentes en un array organizado por estudiante y aporte
+foreach ($notasExistentes as $nota) {
+    $notasMap[$nota['id_estudiante']][$nota['id_aporte']][] = $nota['nota'];
+}
 
 // Por defecto, se puede seleccionar el primer aporte de la lista
 $id_aporte_seleccionado = isset($aportes[0]['id_aporte']) ? $aportes[0]['id_aporte'] : 0;

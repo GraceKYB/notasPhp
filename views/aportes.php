@@ -85,6 +85,10 @@ $asignaturas = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <input type="hidden" name="id_paralelo" value="<?php echo $asignatura['id_paralelo']; ?>">
                         <button type="submit" style="padding:5px 10px; border-radius:5px; background-color:#dc3545; color:white;">Importar Notas</button>
                     </form>
+                    <a href="../views/asistencia.php?id_asignatura=<?php echo $asignatura['id_asignatura']; ?>&id_carrera=<?php echo $asignatura['id_carrera']; ?>&id_nivel=<?php echo $asignatura['id_nivel']; ?>&id_jornada=<?php echo $asignatura['id_jornada']; ?>&id_paralelo=<?php echo $asignatura['id_paralelo']; ?>" 
+                        style="text-decoration: none; color: white; background-color: #28a745; padding: 5px 10px; border-radius: 5px; display: inline-block;">
+                        Asistencia
+                    </a>
                     </td>
                 </tr>   
             <?php endforeach; 

@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
                             header("Location: ../views/docente.php");
                             break;
                         case 1: // Estudiante
-                            header("Location: ../estudiante.php");
+                            header("Location: ../views/estudiante.php");
                             break;
                         default:
                             header("Location: ../views/login.php");

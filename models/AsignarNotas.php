@@ -186,5 +186,16 @@ class AsignarNotas {
             return false;
         }
     }
+    public function getNotasExistentes($id_asignatura) {
+        $sql = "SELECT n.id_estudiante, n.id_aporte, n.nota
+                FROM notas n
+                WHERE n.id_asignatura = :id_asignatura
+                ORDER BY n.id_estudiante, n.id_aporte, n.id_notas ASC"; // Ordenar correctamente
+    
+        $stmt = $this->conexion->prepare($sql);
+        $stmt->bindParam(':id_asignatura', $id_asignatura, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
 ?>
